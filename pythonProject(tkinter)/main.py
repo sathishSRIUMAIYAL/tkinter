@@ -68,3 +68,47 @@ but.pack()
 cle=Button(form,text='clear',command=no)
 cle.pack()
 form.mainloop()
+
+# check button
+
+from tkinter import *
+from tkinter import messagebox
+sai=Tk()
+sai.geometry('500x500')
+sai.title('sathiahkumar')
+sai.iconbitmap('icon.ico')
+
+def success():
+    if (c1.get()==1):
+        val=c1.get()
+        messagebox.showinfo('message',val)
+
+    if (c2.get()==1):
+        va=c2.get()
+        messagebox.showinfo('message',va)
+
+    if c3.get()==1:
+        val=c3.get()
+        messagebox.showinfo('message',val)
+
+
+def clear():
+    cc1.deselect()
+    messagebox.showinfo()
+
+
+
+c1=IntVar()
+c2=IntVar()
+c3=IntVar()
+
+l=Label(sai,text='chooes',bg='red',fg='white',font=('time',10),padx=10,pady=10,width=10).grid(row=0,column=0)
+
+cc1=Checkbutton(sai,text='Amma',variable=c1,onvalue=1,offvalue=0).grid(row=1,column=0)
+cc2=Checkbutton(sai,text='Appa',variable=c2,onvalue=1,offvalue=0).grid(row=1,column=1)
+cc3=Checkbutton(sai,text='Me',variable=c3,onvalue=1,offvalue=0).grid(row=1,column=2)
+
+sub=Button(sai,text='submit',bg='blue',padx=40,pady=10,width=30,command=success).grid(row=2,column=0)
+cle=Button(sai,text='clear',command=clear).grid(row=4,column=2)
+
+sai.mainloop()
