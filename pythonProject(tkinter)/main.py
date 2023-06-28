@@ -244,3 +244,83 @@ cle.grid(row=5,column=1,sticky=E)
 
 
 sai.mainloop()
+
+
+
+# messagebox
+
+'''
+1.show info
+2.show error
+3.show Warning
+4.Ask question
+5.Ask okcancel
+6.Ask retrycancel
+7.Ask yes no
+8.Ask yesnocancel
+'''
+
+from tkinter import *
+from tkinter import messagebox
+
+sai=Tk()
+sai.geometry('500x600')
+
+
+def info():
+    messagebox.showinfo('shoe info','information')
+
+def error():
+    messagebox.showerror('show errer','information')
+
+def warning():
+    messagebox.showwarning('showwarning','warning')
+
+def question():
+    messagebox.askquestion('question','yes or no')
+
+def okcancel():
+    messagebox.askokcancel('show ok','as you wish')
+
+def retrycancel():
+    messagebox.askretrycancel('retry','as yor wish')
+
+def yesno():
+    messagebox.askyesno('ok','as you wish')
+def yesnocancel():
+    messagebox.askyesnocancel('ask yes no cancel','say')
+
+
+
+
+
+
+
+info=Button(sai,text='Show info',command=info)
+info.grid(row=0,column=0,pady=5)
+
+Error=Button(sai,text='Show error',command=error)
+Error.grid(row=1,column=0,pady=5)
+
+Warning=Button(sai,text='Show warning',command=warning)
+Warning.grid(row=2,column=0,pady=5)
+
+Question=Button(sai,text='show Question',command=question)
+Question.grid(row=3,column=0,pady=5)
+
+OKcancel=Button(sai,text='show okcancel',command=okcancel)
+OKcancel.grid(row=4,column=0,pady=5)
+
+RetryCancel=Button(sai,text='retrycancel',command=retrycancel)
+RetryCancel.grid(row=5,column=0,pady=5)
+
+Yesno=Button(sai,text='show yesno',command=yesno)
+Yesno.grid(row=6,column=0,pady=5)
+
+
+Yesnocancel=Button(sai,text='yesnocansel',command=yesnocancel)
+Yesnocancel.grid(row=7,column=0)
+
+
+
+sai.mainloop()
