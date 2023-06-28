@@ -27,3 +27,44 @@ re.pack(fill='x')
 
 
 sai.mainloop()
+
+
+# text box
+
+
+from tkinter import *
+from tkinter  import  messagebox
+form=Tk()
+form.wm_geometry('500x500')
+def ok():
+    data=Name.get()
+    # lam=Label(form,text=data,font=('time',30),fg='red')
+    # lam.pack()
+    messagebox.showinfo("message",data)
+
+def no():
+    Name.delete(0,END)
+
+def submit():
+    if(c1.get()==1):
+        # val=chk1.cget('text')
+          val=c1.get()
+          messagebox.showinfo(val)
+
+
+def clear():
+    messagebox.showinfo()
+
+
+
+#text box
+
+Name=Entry(form,width=50,font=('time',10),bg='red',fg='white',selectbackground='black',selectforeground='yellow',show='*****')
+Name.pack()
+
+but=Button(form,text='submit',font=('times',16),width=10,padx=50,bg='yellow',command=ok)
+but.pack()
+
+cle=Button(form,text='clear',command=no)
+cle.pack()
+form.mainloop()
