@@ -156,7 +156,27 @@ cb.current(3)
 cb.bind('<<ComboboxSelected>>',comboclick)
 cb.pack(pady=30)
 
+sai.mainloop()
 
+
+# grid
+
+from tkinter import *
+sai=Tk()
+sai.geometry('500x500')
+sai.title('Login page...')
+sai.iconbitmap('icon.ico')
+
+l=Label(sai,text='Registration...',font=('time',16,'bold'),fg='green',pady=10).grid(columnspan=2)
+l1=Label(sai,text='Username',font=('time',16,'bold')).grid(row=1,column=0,pady=10)
+txName=Entry(sai,font=('time',14,'bold')).grid(row=1,column=1)
+l2=Label(sai,text='Password',font=('time',16,'bold')).grid(row=2,column=0,pady=10)
+txPassword=Entry(sai,font=('time',14,'bold')).grid(row=2,column=1)
+l3=Label(sai,text='E-mail',font=('time',16,'bold')).grid(row=3,column=0,pady=10)
+teemail=Entry(sai,font=('time',14,'bold')).grid(row=3,column=1)
+
+b=Button(sai,text='Submit',bg='green',fg='white',padx=20,pady=5,width=5,font=('time',15,'bold')).grid(row=4,column=1,sticky=W)
+c=Button(sai,text='Clear',bg='red',fg='white',padx=20,pady=5,width=5,font=('time',15,'bold')).grid(row=4,column=1,sticky=E)
 
 
 sai.mainloop()
