@@ -112,3 +112,21 @@ sub=Button(sai,text='submit',bg='blue',padx=40,pady=10,width=30,command=success)
 cle=Button(sai,text='clear',command=clear).grid(row=4,column=2)
 
 sai.mainloop()
+
+
+# radio box
+
+from tkinter import *
+sai=Tk()
+sai.geometry('500x500')
+l=Label(sai,text='Radio Button',relief="raised",width=30)
+l.pack()
+gender=IntVar()
+
+Bmale=Radiobutton(sai,text='Male',variable=gender,value=1)
+Fmale=Radiobutton(sai,text='Fmale',variable=gender,value=2)
+Bmale.pack()
+Fmale.pack()
+
+
+sai.mainloop()
