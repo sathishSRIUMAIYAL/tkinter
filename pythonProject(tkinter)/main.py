@@ -130,3 +130,33 @@ Fmale.pack()
 
 
 sai.mainloop()
+
+
+#combobox
+
+from tkinter import *
+from tkinter import ttk
+from tkinter import messagebox
+
+sai=Tk()
+sai.geometry('500x500')
+sai.title('combo box')
+
+def comboclick(event):
+    data=cb.get()
+    messagebox.showinfo('message',data)
+
+
+l=Label(sai,text='combo box',relief='raised',bg='blue')
+l.pack(fill=X)
+
+cb=ttk.Combobox(sai,width=30)
+cb['values']=('c','c++','java','python')
+cb.current(3)
+cb.bind('<<ComboboxSelected>>',comboclick)
+cb.pack(pady=30)
+
+
+
+
+sai.mainloop()
